@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Douglas, Fabian">
+        <meta name="description" content="Global Shipping">
+        <meta name="keywords" content="HTML, CSS, JS, Web Development, json, git, GitHub">
+
+        <title>Global Shipping</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@300;400;500;600&display=swap">
+        <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Dokdo&family=Knewave&family=Permanent+Marker&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <script src="./assets/js/app.js" type="module"></script>
+        <script src="./assets/js/map.js" type="module"></script>
+        <script src='https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.js'></script>
+        <link href='https://api.mapbox.com/mapbox-gl-js/v3.8.0/mapbox-gl.css' rel='stylesheet' />
+        <script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.min.js'></script>
+        <link rel='stylesheet' href='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.7.0/mapbox-gl-geocoder.css' type='text/css' />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+        <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+        <link rel="stylesheet" href="./assets/css/style.css" media="all">        
+    </head>
+    <body>
+        <header>
+            <div class="container flex flex-between">
+                <div class="sky-logo">
+                    <a class="logo" href="#">Global</a>
+                </div>
+                <div class="menu">
+                    <a href="#offers">Shipping</a>
+                    <a href="#contactus">Contact</a>
+                    <a href="#title-map">Tracking</a>
+                </div>
+                <div class="flex">
+                    <nav class="flex">
+                        <ul class="flex">
+                            <li>
+                                <a class="login" href="#">Log in / Register</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="dropdown">
+                        <button class="dropdown-btn">
+                            <i class="fa-solid fa-bars"></i>
+                        </button>
+                        <div class="dropdown-content">
+                            <a href="#offers">Shipping</a>
+                            <a href="#contactus">Contact</a>
+                            <a href="#title-map">Tracking</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="loginModal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <h2>Log In</h2>
+                        <form id="loginForm">
+                            <label for="username">Username</label>
+                            <input 
+                                type="text" 
+                                id="username" 
+                                name="username" 
+                                placeholder="Enter your username" 
+                                required
+                            >
+                            <label for="password">Password</label>
+                            <input 
+                                type="password" 
+                                id="password" 
+                                name="password" 
+                                placeholder="Enter your password" 
+                                required
+                            >
+                            <button type="submit" class="login-btn">
+                                Log In
+                            </button>
+                            <a href="#" class="create-account">
+                                Create an account
+                            </a>
+                            <a href="#" class="forgot-password">
+                                Forgot Username or Password?
+                            </a>
+                        </form>
+                    </div>
+                </div>                
+            </div>                
+        </header>
+        <main>
+            <section class="hero-banner">
+                <div class = "container">
+                    <div class="col flex">
+                        <div class="advert">
+                            <p class="large-text">Delivering Beyond Borders, Every Time!</p>
+                            <h3>Get up to 50% off on first shipping</h3>
+                            <button class="sale-button">Know more</button>                             
+                        </div>
+                        <div class="image">
+                            <img src="./assets/img/hero-banner-img.png">
+                        </div>
+                    </div>                    
+                </div>     
+            </section>
+            <section class="container product-grid">
+                <div class="product">
+                    <i class="fa-solid fa-truck"></i>
+                    <h3>Ship now</h3>
+                    <p class="service-description">Safe and reliable delivery of your goods.</p>
+                </div>
+                <div class="product">
+                    <i class="fa-solid fa-bell"></i>
+                    <h3>Delivery alerts</h3>
+                    <p class="service-description">Stay updated on your shipments.</p>
+                </div>
+                <div class="product">
+                    <i class="fa-solid fa-shop"></i>
+                    <h3>Store</h3>
+                    <p class="service-description">Check out store hours & services.</p>
+                </div>
+            </section>
+            <section>
+                <div class="row-location location-text">       
+                    <h2 id="title-map">Track a shipment</h2> 
+                    <div class="flex container traking">
+                        <div class="traking">
+                            <input type="text" class="track-input" placeholder="Tracking ID"> 
+                            <button class="track-btn"><i class="fa-sharp fa-solid fa-location-dot"></i></button>  
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-map" id="location">
+                    <div class="container">
+                        <div id="map">
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <section id="contactus" class="contact-us">
+                <h2>Contact Us</h2>
+                <div class="container flex">
+                    <div class="left">
+                        <form>
+                            <label for="name">Name</label>
+                            <input type="text" id="name" placeholder="Enter your name">
+                            <label for="email">Email</label>
+                            <input type="text" id="email" placeholder="Enter your email">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter your subject">                        
+                            <label for="message">Message</label>
+                            <textarea rows="5" id="message" placeholder="Enter your Message"></textarea>
+                            <p class="output"></p>
+                            <button type="submit" class="login-btn send-message">Send Message</button>
+                        </form>
+                    </div>
+                    <div class="right">
+                        <img src="./assets/img/download-app-img.png" alt="download app">
+                    </div>
+                </div>
+            </section>
+        </main> 
+        <footer>
+            <section class="container flex flex-between">
+                <div class="socials">
+                    <ul>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-square-instagram"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <i class="fa-brands fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <p class="copyright">&copy; Global shipping, 2024. All rights reserved.</p>
+            </section>
+        </footer>     
+    </body>
+</htm>
