@@ -3,7 +3,7 @@
 This project was developed for Program Developer students, focusing on tools like Git and GitHub while working remotely. This web application was designed for a fictional delivery company called 'Global Shipping', and includes features such as a geolocalization (Geolocation and MapBox APIs), modal dialogs, and responsive design. Below are the details of the project's structure and functionality.
 
 ## 🔗Project Demo
-You can see the live demo of the project [here](https://douglasfssantiago.github.io/global-shipping/).
+You can see the live demo of the project [here](https://fabianmendozaospina.github.io/global-shipping/).
 
 ![](./assets/img/readme2.png)
 
@@ -22,13 +22,14 @@ You can see the live demo of the project [here](https://douglasfssantiago.github
 To run this project locally, follow these steps:
 1. Clone the repository:
     ```sh
-    git clone https://github.com/douglasfssantiago/global-shipping.git
+    git clone https://github.com/fabianmendozaospina/global-shipping
     ```
 2. Navigate to the project directory:
     ```sh
     cd global-shipping
     ```
 3. Open `index.html` in your browser to view the application.
+4. Accept permissions requested from the popup appearing. 
 
 
 ## Folder Structure
