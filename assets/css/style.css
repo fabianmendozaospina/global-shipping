@@ -350,6 +350,8 @@ label {
         img {
             width: 300px;
             height: 300px;
+            min-width:300px;
+            min-height: auto !important;            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -439,7 +441,7 @@ label {
 
 .right {
     width: 50%;
-   padding-left: 60px;
+    padding-left: 60px;
     align-content: center;
 
 
@@ -447,7 +449,11 @@ label {
         justify-content: center;
         align-items: center;
         align-content: center;
-            }
+        width: 100%;
+        height: auto;
+        min-width: 402px;
+        min-height: auto;
+    }
 }
 
 .contact-us {
@@ -585,6 +591,18 @@ footer {
     font-size: 20px;
 }
 
+.send-message {
+    margin: 10px 0; 
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: var(--app-detail-button-bg-color);
+    color: var(--app-white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-block; 
+}
+
 /*--------------------------------------*/
 /*          Common Media Query          */
 /*--------------------------------------*/
@@ -642,3 +660,41 @@ footer {
     }
 }
 
+@media (max-width: 850px) {
+    .right {
+        img {
+            display: none;
+        }
+    }
+
+    form {
+        width: 200%;
+    }
+}
+
+@media (max-width: 640px) {
+
+    .advert {
+        .large-text {
+            font-size: 20px;
+        }
+
+        h3 {
+            font-size: 10px !important;
+        }
+    }
+
+    .product {
+        i {
+            font-size: 28px;
+        }
+
+        h3 {
+            font-size: 14px;
+        }
+
+        p {
+            font-size: 10px;
+        }
+    }
+}

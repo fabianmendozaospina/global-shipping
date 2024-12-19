@@ -52,9 +52,13 @@ listen('click', window, (event) => {
 
 listen('click', sendMessage, (event) => {
     event.preventDefault();
+    validateData();
+});
+
+function validateData() {
     const fields = [];
     output.innerText = "";
-
+    
     if (!VALID_CHARS_REGEX.test(name.value)) {
         fields.push('Name');        
     }
@@ -83,4 +87,4 @@ listen('click', sendMessage, (event) => {
         message.value = '';
         output.innerText = 'Your message was sent successfully!';
     }
-});
+}
